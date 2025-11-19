@@ -1,0 +1,45 @@
+# Dossiers de configuration IDE/éditeur
+
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+
+# Fichiers système
+
+.DS_Store
+Thumbs.db
+.AppleDouble
+.LSOverride
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+
+# Logs
+
+*.log
+
+
+# Fichiers temporaires / backups
+
+*.tmp
+*.swp
+*.bak
+*~
+
+
+# Build / distribution (si ajoutés plus tard)
+
+dist/
+build/
+
+# Environment / secrets
+
+.env
+
+# Autres fichiers inutiles
+
+*.orig
+*.save
