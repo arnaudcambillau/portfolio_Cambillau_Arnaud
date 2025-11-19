@@ -53,6 +53,8 @@ Ce site présente mes projets, mes compétences et mon parcours dans le dévelop
 │  ├─ 📄 accordion.js
 │  └─ 📄 contact.js
 
+```
+
 ---
 
 ## 🔧 Installation & utilisation
@@ -61,6 +63,8 @@ Clone le projet :
 
 ```bash
 git clone https://github.com/arnaudcambillau/portfolio_Cambillau_Arnaud.git
+
+```
 
 ## 🧰 Améliorations prévues
 - Optimisation responsive  
