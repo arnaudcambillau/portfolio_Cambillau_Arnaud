@@ -59,7 +59,7 @@ Ce site présente mes projets, mes compétences et mon parcours dans le dévelop
 Clone le projet :
 
 ```bash
-git clone https://github.com/<tonPseudo>/portfolio_Cambillau_Arnaud.git
+git clone https://github.com/arnaudcambillau/portfolio_Cambillau_Arnaud.git
 
 ## 🧰 Améliorations prévues
 - Optimisation responsive  
