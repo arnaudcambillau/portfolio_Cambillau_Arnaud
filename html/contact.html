@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - Arnaud Cambillau</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/contact.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+    <nav class="navbar" role="navigation" aria-label="Navigation principale">
+        <div class="nav-container">
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li>
+                    <a href="contact.html" class="active" aria-current="page"><span class="dot"></span>Contact</a>
+                </li>
+            </ul>
+
+            <button class="theme-toggle" id="themeToggle" aria-label="Changer de thème">
+                <i class="fas fa-moon" id="themeIcon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <main class="container">
+        <header class="contact-header">
+            <p class="section-subtitle">Get in touch</p>
+            <h1 class="page-title">Contact</h1>
+            <p class="contact-description">
+                Une question ou un projet en tête ? N'hésitez pas à me contacter. Je
+                suis toujours ouvert aux nouvelles opportunités et collaborations !
+            </p>
+            <address class="location">
+                <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                Location: <span>France</span>
+            </address>
+        </header>
+
+        <section class="contact-methods" aria-labelledby="contact-methods-title">
+            <h2 id="contact-methods-title" class="visually-hidden">
+                Méthodes de contact
+            </h2>
+
+            <article class="contact-card">
+                <figure class="contact-card-icon" aria-hidden="true">
+                    <i class="fas fa-envelope"></i>
+                </figure>
+                <h3>Email</h3>
+                <a href="mailto:cambillau.arnaud@gmail.com">cambillau.arnaud@gmail.com</a>
+            </article>
+
+            <article class="contact-card">
+                <figure class="contact-card-icon" aria-hidden="true">
+                    <i class="fab fa-github"></i>
+                </figure>
+                <h3>GitHub</h3>
+                <a href="https://github.com/arnaudcambillau" target="_blank"
+                    rel="noopener noreferrer">@arnaudcambillau</a>
+            </article>
+
+            <article class="contact-card">
+                <figure class="contact-card-icon" aria-hidden="true">
+                    <i class="fab fa-linkedin"></i>
+                </figure>
+                <h3>LinkedIn</h3>
+                <a href="https://linkedin.com/in/arnaud-cambillau" target="_blank" rel="noopener noreferrer">Arnaud
+                    Cambillau</a>
+            </article>
+        </section>
+
+        <section class="contact-content" aria-labelledby="form-title">
+            <h2 id="form-title" class="section-title">Envoyez-moi un message</h2>
+
+            <aside class="alert alert-success" id="successAlert" role="status" aria-live="polite">
+                <i class="fas fa-check-circle" aria-hidden="true"></i>
+                <div class="alert-content">
+                    <strong>✅ Message envoyé avec succès !</strong>
+                    <p>
+                        Merci pour votre message. Je vous répondrai dans les plus brefs
+                        délais.
+                    </p>
+                </div>
+            </aside>
+
+            <aside class="alert alert-error" id="errorAlert" role="alert" aria-live="assertive">
+                <i class="fas fa-exclamation-circle" aria-hidden="true"></i>
+                <div class="alert-content">
+                    <strong>❌ Erreur</strong>
+                    <p id="errorMessage">
+                        Une erreur s'est produite. Veuillez réessayer.
+                    </p>
+                </div>
+            </aside>
+
+            <form class="contact-form" id="contactForm" novalidate>
+    <fieldset>
+        <legend>Vos informations</legend>
+        
+        <div class="form-group">
+            <label for="from_name">Nom <span class="required" aria-label="requis">*</span></label>
+            <input 
+                type="text" 
+                id="from_name" 
+                name="from_name"
+                placeholder="Votre nom complet" 
+                required
+            >
+        </div>
+        
+        <div class="form-group">
+            <label for="from_email">Email <span class="required" aria-label="requis">*</span></label>
+            <input 
+                type="email" 
+                id="from_email" 
+                name="from_email"
+                placeholder="votre.email@example.com"
+                required
+            >
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Votre message</legend>
+        
+        <div class="form-group">
+            <label for="subject">Sujet <span class="required" aria-label="requis">*</span></label>
+            <input 
+                type="text" 
+                id="subject" 
+                name="subject"
+                placeholder="Objet de votre message"
+                required
+            >
+        </div>
+        
+        <div class="form-group">
+            <label for="message">Message <span class="required" aria-label="requis">*</span></label>
+            <textarea 
+                id="message" 
+                name="message"
+                placeholder="Votre message..." 
+                rows="6"
+                required
+            ></textarea>
+        </div>
+    </fieldset>
+    
+    <button type="submit" class="submit-btn" id="submitBtn">
+        <i class="fas fa-paper-plane" aria-hidden="true"></i>
+        Envoyer le message
+    </button>
+</form>
+        </section>
+
+        <aside class="availability" aria-labelledby="availability-title">
+            <h2 id="availability-title" class="section-title">Disponibilité</h2>
+            <div class="availability-content">
+                <article class="availability-card">
+                    <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+                    <h3>Formation en cours</h3>
+                    <p>Actuellement en formation à l'EEDN jusqu'en février 2026</p>
+                </article>
+                <article class="availability-card">
+                    <i class="fas fa-briefcase" aria-hidden="true"></i>
+                    <h3>Recherche d'opportunités</h3>
+                    <p>Ouvert aux stages et opportunités à partir de mars 2026</p>
+                </article>
+                <article class="availability-card">
+                    <i class="fas fa-code" aria-hidden="true"></i>
+                    <h3>Projets freelance</h3>
+                    <p>Disponible pour des petits projets web en parallèle</p>
+                </article>
+            </div>
+        </aside>
+    </main>
+
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <!-- Scripts -->
+    <script src="../js/theme.js"></script>
+    <script src="../js/animations.js"></script>
+    <script src="../js/contact.js"></script>
+</body>
+
+</html>

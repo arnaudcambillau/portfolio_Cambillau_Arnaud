@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Arnaud Cambillau</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/projects.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar" role="navigation" aria-label="Navigation principale">
+        <div class="nav-container">
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="projects.html" class="active" aria-current="page"><span class="dot"></span>Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            
+            <button class="theme-toggle" id="themeToggle" aria-label="Changer de thème">
+                <i class="fas fa-moon" id="themeIcon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <main class="container">
+        <header class="projects-header">
+            <p class="section-subtitle">My work</p>
+            <h1 class="page-title">Projects</h1>
+            <p class="projects-intro">
+                Découvrez mes projets de développement web, des applications concrètes 
+                développées pendant ma formation et mes contributions open-source.
+            </p>
+        </header>
+
+        <section class="projects-grid" aria-label="Liste des projets">
+            <article class="project-card">
+                <div class="project-image popcorn-bg">
+                    <i class="fas fa-film" ></i>
+                    <h3>PopcornTV</h3>
+                </div>
+                <div class="project-info">
+                    <h2 class="project-title">PopcornTV</h2>
+                    <p class="project-description">
+                        Application web de streaming pour découvrir et regarder des films. 
+                        Interface moderne avec recherche et filtres avancés.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">HTML/CSS</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">API</span>
+                        <span class="tag">PHP</span>
+                        <span class="tag">MySQL</span>
+                    </div>
+                    <span class="project-status personal">Projet Personnel</span>
+                    <div class="project-actions">
+                        <a href="https://github.com/arnaudcambillau/PopcornTV" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="Voir le code source">
+                            <i class="fas fa-code"></i>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-image gourmet-bg">
+                    <i class="fas fa-utensils"></i>
+                    <h3>Gourmet</h3>
+                </div>
+                <div class="project-info">
+                    <h2 class="project-title">Gourmet</h2>
+                    <p class="project-description">
+                        Plateforme collaborative pour partager des recettes de cuisine. 
+                        Base de données MySQL et gestion d'utilisateurs.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">HTML/CSS</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">MySQL</span>
+                        <span class="tag">Team Work</span>
+                    </div>
+                    <span class="project-status contributor">Collaborateur</span>
+                    <div class="project-actions">
+                        <a href="https://github.com/Lajous-gauthier/Gourmet" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="Voir le code source">
+                            <i class="fas fa-code"></i>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-image github-bg">
+                    <i class="fab fa-github"></i>
+                    <h3>Git Workshop</h3>
+                </div>
+                <div class="project-info">
+                    <h2 class="project-title">DW6 GitHub Exercise</h2>
+                    <p class="project-description">
+                        Exercices pratiques de collaboration avec Git et GitHub. 
+                        Apprentissage du travail en équipe et des workflows.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">HTML/CSS</span>
+                        <span class="tag">Git</span>
+                        <span class="tag">GitHub</span>
+                        <span class="tag">Collaboration</span>
+                    </div>
+                    <span class="project-status contributor">Collaborateur</span>
+                    <div class="project-actions">
+                        <a href="https://github.com/AnthonyCC-G/DW6-EXO-GITHUB" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="Voir le code source">
+                            <i class="fas fa-code"></i>
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <aside class="more-projects">
+            <p>Plus de projets sur</p>
+            <a href="https://github.com/arnaudcambillau" target="_blank" rel="noopener noreferrer" class="github-link" aria-label="Voir mon profil GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+        </aside>
+
+        <section class="skills-section" aria-labelledby="skills-title">
+            <h2 id="skills-title" class="section-title">Compétences Techniques</h2>
+            <div class="skills-grid">
+                <article class="skill-category">
+                    <h3><i class="fas fa-laptop-code"></i> Frontend</h3>
+                    <ul>
+                        <li>HTML5 & CSS3</li>
+                        <li>JavaScript ES6+</li>
+                        <li>TailwindCSS</li>
+                        <li>Responsive Design</li>
+                    </ul>
+                </article>
+
+                <article class="skill-category">
+                    <h3><i class="fas fa-server"></i> Backend</h3>
+                    <ul>
+                        <li>PHP</li>
+                        <li>Symfony</li>
+                        <li>MySQL</li>
+                        <li>API REST</li>
+                    </ul>
+                </article>
+
+                <article class="skill-category">
+                    <h3><i class="fas fa-tools"></i> Outils</h3>
+                    <ul>
+                        <li>Git & GitHub</li>
+                        <li>Docker</li>
+                        <li>MAMP</li>
+                        <li>Bash</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <script src="../js/theme.js"></script>
+    <script src="../js/animations.js"></script>
+</body>
+</html>
