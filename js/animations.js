@@ -3,9 +3,6 @@
    ========================================== */
 document.addEventListener('DOMContentLoaded', () => {
 
-  // --- Page fade-in ---
-  document.body.classList.add('loaded');
-
   // --- Scroll Reveal ---
   const revealEls = document.querySelectorAll('.reveal');
   if (revealEls.length) {
