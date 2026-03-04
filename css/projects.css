@@ -1,196 +1,316 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Projects — Arnaud Cambillau</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link rel="stylesheet" href="../css/main.css" />
-  <link rel="stylesheet" href="../css/projects.css" />
-</head>
-<body>
+/* ==========================================
+   PROJECTS.CSS — Page projets & compétences
+   ========================================== */
 
-  <nav class="navbar" role="navigation" aria-label="Navigation principale">
-    <div class="nav-inner">
-      <a href="../index.html" class="nav-logo">AC.</a>
-      <ul class="nav-links">
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="projects.html" class="active" aria-current="page">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      <div class="nav-status">Disponible pour missions</div>
-      <button class="theme-toggle" id="themeToggle" aria-label="Changer de thème">
-        <i class="fas fa-moon" id="themeIcon"></i>
-      </button>
-    </div>
-  </nav>
-      <div class="section-tag"><i class="fas fa-folder-open" aria-hidden="true"></i> My work</div>
-      <h1 class="page-title">Mes <span>Projets</span></h1>
-      <p class="projects-intro">
-        Des applications concrètes développées pendant ma formation et en dehors —
-        du back-end Symfony aux intégrations d'API, en passant par le travail d'équipe.
-      </p>
-    </header>
+.projects-header {
+  margin-top: 120px;
+  margin-bottom: 3rem;
+}
 
-    <!-- PROJECTS GRID -->
-    <section aria-label="Liste des projets">
-      <div class="projects-grid">
+.projects-intro {
+  color: var(--text-2);
+  font-size: 1rem;
+  margin-top: 0.8rem;
+  max-width: 650px;
+  line-height: 1.8;
+}
 
-        <!-- Vault.gg -->
-        <article class="project-card reveal">
-          <div class="project-banner bg-vault">
-            <span class="banner-icon" aria-hidden="true">🎮</span>
-            <span class="banner-title">Vault.gg</span>
-          </div>
-          <div class="project-body">
-            <div class="project-header">
-              <h2 class="project-name">Vault.gg</h2>
-              <span class="project-badge badge-mvp">V1 MVP</span>
-            </div>
-            <p class="project-desc">Bibliothèque de jeux vidéo personnelle. Auth utilisateur, ajout/suppression de jeux, recherche & filtres, intégration API externe (IGDB/RAWG) pour récupérer les données automatiquement. Projet final de formation.</p>
-            <div class="project-tech">
-              <span class="tech-tag">PHP</span>
-              <span class="tech-tag">MySQL</span>
-              <span class="tech-tag">JavaScript</span>
-              <span class="tech-tag">API RAWG</span>
-              <span class="tech-tag">HTML/CSS</span>
-            </div>
-            <div class="project-footer">
-              <span class="project-status-text"><i class="fas fa-code-branch" aria-hidden="true"></i> Projet final de formation</span>
-              <a href="https://github.com/arnaudcambillau/vault-gg" target="_blank" rel="noopener noreferrer" class="project-link-btn" aria-label="Voir le code source de Vault.gg">
-                <i class="fab fa-github" aria-hidden="true"></i> Code
-              </a>
-            </div>
-          </div>
-        </article>
+/* ==========================================
+   PROJECTS GRID
+   ========================================== */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin: 3rem 0;
+}
 
-        <!-- TPagenda -->
-        <article class="project-card reveal">
-          <div class="project-banner bg-agenda">
-            <span class="banner-icon" aria-hidden="true">📋</span>
-            <span class="banner-title">TPagenda</span>
-          </div>
-          <div class="project-body">
-            <div class="project-header">
-              <h2 class="project-name">TPagenda</h2>
-              <span class="project-badge badge-personal">Personnel</span>
-            </div>
-            <p class="project-desc">Gestionnaire de contacts complet avec CRUD, authentification sécurisée, relations entre entités via Doctrine et interface Bootstrap responsive.</p>
-            <div class="project-tech">
-              <span class="tech-tag">Symfony</span>
-              <span class="tech-tag">PHP</span>
-              <span class="tech-tag">Doctrine</span>
-              <span class="tech-tag">MySQL</span>
-              <span class="tech-tag">Bootstrap</span>
-              <span class="tech-tag">Twig</span>
-            </div>
-            <div class="project-footer">
-              <span class="project-status-text"><i class="fas fa-check-circle" aria-hidden="true"></i> Terminé</span>
-              <a href="https://github.com/arnaudcambillau/TPagenda" target="_blank" rel="noopener noreferrer" class="project-link-btn" aria-label="Voir le code source de TPagenda">
-                <i class="fab fa-github" aria-hidden="true"></i> Code
-              </a>
-            </div>
-          </div>
-        </article>
+.project-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  backdrop-filter: blur(12px);
+  transition: var(--transition);
+}
 
-        <!-- GourmeTech -->
-        <article class="project-card reveal">
-          <div class="project-banner bg-gourmet">
-            <span class="banner-icon" aria-hidden="true">🍽️</span>
-            <span class="banner-title">GourmeTech</span>
-          </div>
-          <div class="project-body">
-            <div class="project-header">
-              <h2 class="project-name">GourmeTech</h2>
-              <span class="project-badge badge-collab">Collaborateur</span>
-            </div>
-            <p class="project-desc">Site de recettes avec recherche avancée, système de favoris via Local Storage et intégration de l'API TheMealDB. Projet collaboratif en équipe.</p>
-            <div class="project-tech">
-              <span class="tech-tag">HTML/CSS</span>
-              <span class="tech-tag">JavaScript</span>
-              <span class="tech-tag">TheMealDB API</span>
-              <span class="tech-tag">Local Storage</span>
-            </div>
-            <div class="project-footer">
-              <span class="project-status-text"><i class="fas fa-users" aria-hidden="true"></i> Travail d'équipe</span>
-              <a href="https://github.com/Lajous-gauthier/Gourmet" target="_blank" rel="noopener noreferrer" class="project-link-btn" aria-label="Voir le code source de GourmeTech">
-                <i class="fab fa-github" aria-hidden="true"></i> Code
-              </a>
-            </div>
-          </div>
-        </article>
-      </div>
+.project-card:hover {
+  border-color: var(--border-hover);
+  box-shadow: 0 0 50px var(--glow);
+  transform: translateY(-8px);
+}
 
-      <div class="more-projects">
-        <p>Plus de projets sur</p>
-        <a href="https://github.com/arnaudcambillau" target="_blank" rel="noopener noreferrer" class="github-big-link" aria-label="Voir mon profil GitHub">
-          <i class="fab fa-github" aria-hidden="true"></i>
-        </a>
-      </div>
-    </section>
+/* Project banner */
+.project-banner {
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  position: relative;
+  overflow: hidden;
+}
 
-    <div class="divider"></div>
+.project-banner::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.28);
+}
 
-    <!-- SKILLS -->
-    <section class="skills-section" aria-labelledby="skills-title">
-      <div class="section-tag"><i class="fas fa-layer-group" aria-hidden="true"></i> Compétences</div>
-      <h2 id="skills-title" class="section-title">Ma <span>Stack</span></h2>
-      <div class="skills-wrapper">
-        <article class="skill-cat reveal">
-          <div class="skill-cat-header">
-            <div class="skill-cat-icon" aria-hidden="true"><i class="fas fa-paint-brush"></i></div>
-            <div class="skill-cat-name">Front-end</div>
-          </div>
-          <div class="skill-item"><span class="skill-name">HTML5 / CSS3</span><div class="skill-bar-wrap"><div class="skill-bar" style="--w:90%"></div></div></div>
-          <div class="skill-item"><span class="skill-name">JavaScript ES6+</span><div class="skill-bar-wrap"><div class="skill-bar" style="--w:78%"></div></div></div>
-          <div class="skill-item"><span class="skill-name">TailwindCSS</span><div class="skill-bar-wrap"><div class="skill-bar" style="--w:72%"></div></div></div>
-          <div class="skill-item"><span class="skill-name">Bootstrap</span><div class="skill-bar-wrap"><div class="skill-bar" style="--w:75%"></div></div></div>
-          <div class="skill-item"><span class="skill-name">Twig</span><div class="skill-bar-wrap"><div class="skill-bar" style="--w:70%"></div></div></div>
-        </article>
-        <article class="skill-cat reveal">
-          <div class="skill-cat-header">
-            <div class="skill-cat-icon" aria-hidden="true"><i class="fas fa-server"></i></div>
-            <div class="skill-cat-name">Back-end</div>
-          </div>
-          <div class="skill-item"><span class="skill-name">PHP</span><div class="skill-bar-wrap"><div class="skill-bar" style="--w:80%"></div></div></div>
-          <div class="skill-item"><span class="skill-name">Symfony</span><div class="skill-bar-wrap"><div class="skill-bar" style="--w:72%"></div></div></div>
-          <div class="skill-item"><span class="skill-name">MySQL</span><div class="skill-bar-wrap"><div class="skill-bar" style="--w:75%"></div></div></div>
-          <div class="skill-item"><span class="skill-name">MongoDB</span><div class="skill-bar-wrap"><div class="skill-bar" style="--w:55%"></div></div></div>
-          <div class="skill-item"><span class="skill-name">API REST</span><div class="skill-bar-wrap"><div class="skill-bar" style="--w:70%"></div></div></div>
-        </article>
-        <article class="skill-cat reveal">
-          <div class="skill-cat-header">
-            <div class="skill-cat-icon" aria-hidden="true"><i class="fas fa-tools"></i></div>
-            <div class="skill-cat-name">Outils & DevOps</div>
-          </div>
-          <div class="skill-item"><span class="skill-name">Git / GitHub</span><div class="skill-bar-wrap"><div class="skill-bar" style="--w:85%"></div></div></div>
-          <div class="skill-item"><span class="skill-name">Docker</span><div class="skill-bar-wrap"><div class="skill-bar" style="--w:68%"></div></div></div>
-          <div class="skill-item"><span class="skill-name">Bash / Linux</span><div class="skill-bar-wrap"><div class="skill-bar" style="--w:60%"></div></div></div>
-          <div class="skill-item"><span class="skill-name">Figma</span><div class="skill-bar-wrap"><div class="skill-bar" style="--w:65%"></div></div></div>
-          <div class="skill-item"><span class="skill-name">Hardware / Réseaux</span><div class="skill-bar-wrap"><div class="skill-bar" style="--w:78%"></div></div></div>
-        </article>
-      </div>
-    </section>
+.banner-icon {
+  font-size: 2.8rem;
+  position: relative;
+  z-index: 2;
+}
 
-  </main>
+.banner-title {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.95);
+  letter-spacing: 0.06em;
+  position: relative;
+  z-index: 2;
+}
 
-  <footer>
-    <div class="container">
-      <p>Conçu & développé par <span>Arnaud Cambillau</span> · 2025–2026</p>
-      <p><em>"First, solve the problem. Then, write the code."</em> — John Johnson</p>
-    </div>
-  </footer>
+.bg-vault   { background: linear-gradient(135deg, #1a1a3e 0%, #312060 50%, #1e1060 100%); }
+.bg-gourmet { background: linear-gradient(135deg, #1a0f00 0%, #3d1f00 50%, #5a2d00 100%); }
+.bg-agenda  { background: linear-gradient(135deg, #001a2e 0%, #00305a 50%, #004a8a 100%); }
 
-  <script src="../js/theme.js"></script>
-  <script src="../js/animations.js"></script>
-  <script>
-    // Skill bars — déclencher l'animation via CSS custom property
-    document.querySelectorAll('.skill-bar').forEach(bar => {
-      const w = bar.style.getPropertyValue('--w') || bar.getAttribute('style').match(/--w:([\d%]+)/)?.[1] || '0%';
-      bar.style.width = w;
-    });
-  </script>
-</body>
-</html>
+/* Project body */
+.project-body { padding: 1.4rem; }
+
+.project-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.7rem;
+}
+
+.project-name {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-1);
+}
+
+.project-badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.badge-personal {
+  background: rgba(139,92,246,0.15);
+  color: var(--purple-bright);
+  border: 1px solid rgba(139,92,246,0.3);
+}
+
+.badge-collab {
+  background: rgba(59,130,246,0.15);
+  color: #60a5fa;
+  border: 1px solid rgba(59,130,246,0.3);
+}
+
+.badge-mvp {
+  background: rgba(34,211,160,0.12);
+  color: var(--success);
+  border: 1px solid rgba(34,211,160,0.25);
+}
+
+.project-desc {
+  color: var(--text-2);
+  font-size: 0.88rem;
+  line-height: 1.65;
+  margin-bottom: 1.1rem;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1.2rem;
+}
+
+.tech-tag {
+  font-size: 0.72rem;
+  font-weight: 500;
+  padding: 0.22rem 0.6rem;
+  border-radius: 5px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border);
+  color: var(--text-3);
+}
+
+.project-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--border);
+  padding-top: 1rem;
+}
+
+.project-status-text {
+  font-size: 0.78rem;
+  color: var(--text-3);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.project-link-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--purple-bright);
+  padding: 0.35rem 0.9rem;
+  border: 1px solid rgba(139,92,246,0.3);
+  border-radius: 8px;
+  background: rgba(139,92,246,0.08);
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+.project-link-btn:hover {
+  background: rgba(139,92,246,0.2);
+  border-color: var(--purple-bright);
+  box-shadow: 0 0 12px var(--glow);
+}
+
+/* More projects link */
+.more-projects {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0 4rem;
+  color: var(--text-3);
+  font-size: 0.9rem;
+}
+
+.github-big-link {
+  font-size: 1.8rem;
+  color: var(--text-2);
+  transition: var(--transition);
+}
+
+.github-big-link:hover {
+  color: var(--purple-bright);
+  transform: scale(1.15);
+}
+
+/* ==========================================
+   SKILLS SECTION
+   ========================================== */
+.skills-section { margin: 2rem 0 6rem; }
+
+.skills-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.skill-cat {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.8rem;
+  backdrop-filter: blur(12px);
+  transition: var(--transition);
+}
+
+.skill-cat:hover {
+  border-color: var(--border-hover);
+  box-shadow: 0 0 30px var(--glow);
+}
+
+.skill-cat-header {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.skill-cat-icon {
+  width: 40px; height: 40px;
+  border-radius: 10px;
+  background: rgba(139,92,246,0.15);
+  border: 1px solid rgba(139,92,246,0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--purple-bright);
+  font-size: 1rem;
+}
+
+.skill-cat-name {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-1);
+}
+
+.skill-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.9rem;
+}
+
+.skill-item:last-child { margin-bottom: 0; }
+
+.skill-name {
+  font-size: 0.88rem;
+  color: var(--text-2);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.skill-name::before {
+  content: '▹';
+  color: var(--purple);
+  font-size: 0.8rem;
+}
+
+.skill-bar-wrap {
+  width: 100px;
+  height: 4px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 2px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.skill-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--violet), var(--purple-bright));
+  border-radius: 2px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 1.2s cubic-bezier(0.4,0,0.2,1);
+}
+
+.skill-bar.animated { transform: scaleX(1); }
+
+/* ==========================================
+   RESPONSIVE
+   ========================================== */
+@media (max-width: 1024px) {
+  .projects-grid  { grid-template-columns: 1fr 1fr; }
+  .skills-wrapper { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 768px) {
+  .projects-grid  { grid-template-columns: 1fr; }
+  .skills-wrapper { grid-template-columns: 1fr; }
+}
