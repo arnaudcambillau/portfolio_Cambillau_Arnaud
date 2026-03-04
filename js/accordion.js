@@ -1,29 +1,27 @@
 /* ==========================================
-   ACCORDION.JS - Accordéons interactifs
+   ACCORDION.JS — Accordéons interactifs
    ========================================== */
-
 document.addEventListener('DOMContentLoaded', () => {
-    const accordionHeaders = document.querySelectorAll('.accordion-header');
-    
-    accordionHeaders.forEach(header => {
-        header.addEventListener('click', () => {
-            const accordionItem = header.parentElement.parentElement;
-            const isActive = accordionItem.classList.contains('active');
-            
-            // Fermer tous les accordéons
-            document.querySelectorAll('.accordion-item').forEach(item => {
-                item.classList.remove('active');
-                const btn = item.querySelector('.accordion-header');
-                if (btn) {
-                    btn.setAttribute('aria-expanded', 'false');
-                }
-            });
-            
-            // Ouvrir l'accordéon cliqué si il n'était pas actif
-            if (!isActive) {
-                accordionItem.classList.add('active');
-                header.setAttribute('aria-expanded', 'true');
-            }
-        });
+  const accordionHeaders = document.querySelectorAll('.accordion-header');
+  if (!accordionHeaders.length) return;
+
+  accordionHeaders.forEach(header => {
+    header.addEventListener('click', () => {
+      const item = header.closest('.accordion-item');
+      const isActive = item.classList.contains('active');
+
+      // Fermer tous
+      document.querySelectorAll('.accordion-item').forEach(el => {
+        el.classList.remove('active');
+        const btn = el.querySelector('.accordion-header');
+        if (btn) btn.setAttribute('aria-expanded', 'false');
+      });
+
+      // Ouvrir si pas déjà actif
+      if (!isActive) {
+        item.classList.add('active');
+        header.setAttribute('aria-expanded', 'true');
+      }
     });
+  });
 });
